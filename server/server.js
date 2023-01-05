@@ -4,6 +4,7 @@ const http = require('http');
 const app = express();
 const server = http.createServer(app);
 const cors = require('cors');
+let users = [];
 
 app.use(cors());
 const socketIO = require('socket.io')(server, {
@@ -16,8 +17,17 @@ socketIO.on('connection', (socket) => {
   socket.on('message', (data) => {
     socketIO.emit('messageResponse', data);
   });
+  //Add user to the list
+  socket.on('newUser', (data) => {
+    users.push(data);
+    socketIO.emit('newUserResponse', users);
+  });
   socket.on('disconnect', () => {
     console.log('🔥: A user disconnected');
+    //Updates the list of users
+    users = users.filter((user) => user.socketID !== socket.id);
+    socketIO.emit('newUserResponse', users);
+    socket.disconnect();
   });
 });
 
