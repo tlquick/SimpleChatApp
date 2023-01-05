@@ -11,13 +11,14 @@ const ChatFooter = ({ socket }) => {
         text: message,
         name: localStorage.getItem('userName'),
         id: `${socket.id}${Math.random()}`,
-        socketID: socket.id,
+        socketID: socket.id
       });
     }
     setMessage('');
   };
-  return <div className="chat__footer">
-    <form className="form" onSubmit={handleSendMessage}>
+  return (
+    <div className="chat__footer">
+      <form className="form" onSubmit={handleSendMessage}>
         <input
           type="text"
           placeholder="Write message"
@@ -27,7 +28,8 @@ const ChatFooter = ({ socket }) => {
         />
         <button className="sendBtn">SEND</button>
       </form>
-  </div>;
+    </div>
+  );
 };
 
 export default ChatFooter;
