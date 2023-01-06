@@ -5,14 +5,14 @@ const app = express();
 const cors = require('cors');
 app.use(cors());
 const server = http.createServer(app);
-
 let users = [];
 
 const socketIO = require('socket.io')(server, {
   cors: {
-    origin: 'https://client-simple-chat-app.onrender.com',
+    origin: 'http://localhost:3000',
   },
 });
+console.log(process.env.CLIENT_URL);
 socketIO.on('connection', (socket) => {
   console.log(`⚡: ${socket.id} user just connected!`);
   socket.on('message', (data) => {

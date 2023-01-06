@@ -1,6 +1,7 @@
 # dependencies
 client/node_modules
 server/node_modules
+node_modules
 
 # testing
 client/coverage
@@ -13,3 +14,4 @@ server/build
 # misc
 client/.env
 server/.env
+.env
