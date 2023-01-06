@@ -10,7 +10,7 @@ let users = [];
 
 const socketIO = require('socket.io')(server, {
   cors: {
-    origin: 'https://client-simple-chat-app.onrender.com:3000',
+    origin: 'https://client-simple-chat-app.onrender.com',
   },
 });
 socketIO.on('connection', (socket) => {
