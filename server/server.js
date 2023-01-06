@@ -9,12 +9,10 @@ const cors = require('cors');
 app.use(cors());
 const server = http.createServer(app);
 let users = [];
-let address;
-if (process.env.NODE_ENV === 'production') address = process.env.CLIENT_URL;
-else address = process.env.LOCAL_URL;
+
 const socketIO = require('socket.io')(server, {
   cors: {
-    origin: address,
+    origin: process.env.CLIENT_URL,
   },
 });
 socketIO.on('connection', (socket) => {
