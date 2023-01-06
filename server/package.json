@@ -13,6 +13,7 @@
     "format": "prettier --write './**/*.{js,jsx,ts,tsx,css,md,json}' --config ./.prettierrc"
   },
   "devDependencies": {
+    "dotenv": "^16.0.3",
     "eslint": "^8.31.0",
     "eslint-config-node": "^4.1.0",
     "eslint-config-prettier": "^8.6.0",
