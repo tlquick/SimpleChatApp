@@ -9,6 +9,7 @@
 .home__container {
   width: 100%;
   height: 100vh;
+  background: url(../public/background.png);
   display: flex;
   flex-direction: column;
   justify-content: center;
@@ -29,7 +30,7 @@
   padding: 10px;
   font-size: 16px;
   cursor: pointer;
-  background-color: #607eaa;
+  background-color: #9C27B0;
   color: #f9f5eb;
   outline: none;
   border: none;
@@ -43,7 +44,7 @@
 }
 .chat__sidebar {
   height: 100%;
-  background-color: #f9f5eb;
+  background-color: #F3E5F5;
   flex: 0.2;
   padding: 20px;
   border-right: 1px solid #fdfdfd;
@@ -72,16 +73,17 @@
   align-items: center;
   justify-content: space-between;
   padding: 20px;
-  background-color: #f9f5eb;
+  background-color: #F3E5F5;
 }
 .leaveChat__btn {
   padding: 10px;
   width: 150px;
   border: none;
   outline: none;
-  background-color: #d1512d;
+  background-color: #4A148C;
   cursor: pointer;
   color: #eae3d2;
+  border-radius: 5px;
 }
 .message__container {
   width: 100%;
@@ -96,7 +98,7 @@
 }
 .chat__footer {
   padding: 10px;
-  background-color: #f9f5eb;
+  background-color: #F3E5F5;
   height: 10vh;
 }
 .form {
@@ -116,25 +118,26 @@
 }
 .sendBtn {
   width: 150px;
-  background-color: green;
+  background-color: #9C27B0;
   padding: 10px;
   border: none;
   outline: none;
   color: #eae3d2;
   cursor: pointer;
+  border-radius: 5px;
 }
 .sendBtn:hover {
-  background-color: rgb(129, 201, 129);
+  background-color: #E1BEE7;
 }
 .message__recipient {
-  background-color: #f5ccc2;
+  background-color: #F3E5F5;
   width: 300px;
   padding: 10px;
   border-radius: 10px;
   font-size: 15px;
 }
 .message__sender {
-  background-color: rgb(194, 243, 194);
+  background-color: #CE93D8;
   max-width: 300px;
   padding: 10px;
   border-radius: 10px;
